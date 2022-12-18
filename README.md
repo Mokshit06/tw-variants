@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Tailwind doesn't support variant-grouping out of the box because it leads to tons of duplicate CSS being generated as compared to using individual classes.
+Tailwind doesn't support variant-grouping out of the box because it leads to tons of duplicate CSS being generated as compared to using individual classes (as we can see in this [tweet](https://twitter.com/adamwathan/status/1461519824828473359))
 
 This is because with the grouped syntax like `focus:(font-bold,underline)` each group leads to a new CSS selector being generated, and the CSS generated for `focus:font-bold` and `focus:underline` can't be reused.
 
