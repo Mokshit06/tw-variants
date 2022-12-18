@@ -8,9 +8,9 @@
 
 Tailwind doesn't support variant-grouping out of the box because it leads to tons of duplicate CSS being generated as compared to using individual classes (as we can see in this [tweet](https://twitter.com/adamwathan/status/1461519824828473359))
 
-This is because with the grouped syntax like `focus:(font-bold,underline)` each group leads to a new CSS selector being generated, and the CSS generated for `focus:font-bold` and `focus:underline` can't be reused.
+This is because with the grouped syntax like `focus:(font-bold underline)` each group leads to a new CSS selector being generated, and the CSS generated for `focus:font-bold` and `focus:underline` can't be reused.
 
-`tw-variants` overcomes this by expanding this grouped syntax at build time into individual classes. So now when tailwind scans the files, it sees `focus:(font-bold,underline)` as `focus:font-bold focus:underline` since it has been expanded before tailwind sees it.
+`tw-variants` overcomes this by expanding this grouped syntax at build time into individual classes. So now when tailwind scans the files, it sees `focus:(font-bold underline)` as `focus:font-bold focus:underline` since it has been expanded before tailwind sees it.
 
 This way you can use grouped-syntax while not having to worry about the css size.
 
@@ -53,7 +53,7 @@ Just import `tw` from `tw-variants` and use it like a tagged template literal :-
 ```js
 import { tw } from 'tw-variants';
 
-const button = tw`font-semibold border rounded focus:(font-bold,underline)`;
+const button = tw`font-semibold border rounded focus:(font-bold underline)`;
 ```
 
 You can't use `${variable}` inside `tw`, so instead of doing:-
@@ -61,7 +61,7 @@ You can't use `${variable}` inside `tw`, so instead of doing:-
 ```js
 import { tw } from 'tw-variants';
 
-const button = tw`font-semibold border rounded focus:(font-bold,underline)`;
+const button = tw`font-semibold border rounded focus:(font-bold underline)`;
 const redButton = tw`${button} bg-red-500`;
 ```
 
@@ -70,7 +70,7 @@ Instead do:-
 ```js
 import { tw } from 'tw-variants';
 
-const button = tw`font-semibold border rounded focus:(font-bold,underline)`;
+const button = tw`font-semibold border rounded focus:(font-bold underline)`;
 const redButton = `${button} ${tw`bg-red-500`}`;
 ```
 
