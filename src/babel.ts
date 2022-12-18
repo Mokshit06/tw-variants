@@ -3,7 +3,7 @@ import { expandGroups } from 'twind';
 import fs from 'fs';
 import path from 'path';
 
-const twVariantsPath = path.join(process.cwd(), '.tw-variants', 'cache');
+const twVariantsPath = path.join(process.cwd(), '.tw-variants');
 
 if (fs.existsSync(twVariantsPath)) {
   fs.unlinkSync(twVariantsPath);

@@ -1,6 +1,6 @@
 {
   "name": "tw-variants",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "description": "Tailwind variant grouping without increase in css size",
   "main": "dist/index.js",

@@ -40,7 +40,7 @@ And add the same to the `content` section of your `tailwind.config.js`:-
 module.exports = {
   content: [
     // ...
-    './.tw-variants/cache',
+    './.tw-variants',
   ],
   // ...
 };
