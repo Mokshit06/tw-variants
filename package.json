@@ -11,9 +11,22 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./dist/*": "./dist/*",
+    "./babel": {
+      "types": "./dist/babel.d.ts",
+      "import": "./dist/babel.mjs",
+      "require": "./dist/babel.js"
+    }
+  },
   "author": "Mokshit Jain (https://mokshitjain.co)",
   "scripts": {
-    "build": "tsup src/index.ts --dts --format esm,cjs"
+    "build": "tsup src/index.ts src/babel.ts --dts --format esm,cjs"
   },
   "devDependencies": {
     "@types/babel__core": "^7.1.20",
