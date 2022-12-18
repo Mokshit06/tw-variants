@@ -1,0 +1,28 @@
+{
+  "name": "tw-variants",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Tailwind variant grouping without increase in css size",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/mokshit06/tw-variants",
+  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "author": "Mokshit Jain (https://mokshitjain.co)",
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs"
+  },
+  "devDependencies": {
+    "@types/babel__core": "^7.1.20",
+    "@types/node": "^18.11.17",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@babel/core": "^7.20.5",
+    "twind": "^0.16.19"
+  }
+}
