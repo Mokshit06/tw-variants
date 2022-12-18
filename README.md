@@ -74,6 +74,8 @@ const button = tw`font-semibold border rounded focus:(font-bold underline)`;
 const redButton = `${button} ${tw`bg-red-500`}`;
 ```
 
+The grouping-syntax `tw-variants` uses is the same as the one used by `twind`. You can view the supported syntax [here](https://twind.dev/handbook/grouping-syntax.html)
+
 ## Tailwind CSS IntelliSense
 
 If you're using the "Tailwind CSS IntelliSense" Visual Studio Code extension, you can enable autocompletion inside `tw` by adding the following to your `settings.json`:
